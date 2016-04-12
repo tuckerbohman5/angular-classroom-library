@@ -40,6 +40,7 @@ GEM
     bcrypt (3.1.11)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bower-rails (0.10.0)
     builder (3.2.2)
     byebug (8.2.4)
     concurrent-ruby (1.0.1)
@@ -134,6 +135,7 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt (~> 3.1.7)
+  bower-rails
   byebug
   jbuilder (~> 2.0)
   pg (~> 0.15)
