@@ -14,9 +14,11 @@
  *= require_self
  */
 
-
+@import "materialize/components/color";
+$primary-color: color("blue", "lighten-2") !default;
+@import 'materialize';
  
-a {
+/*a {
   text-decoration: none;
   color: white;
   padding: 8px;
@@ -26,3 +28,4 @@ a {
 .active {
   background-color: blue;
 }
+*/
