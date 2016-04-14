@@ -3,17 +3,28 @@
   <form validate ng-submit="register()">
       <label>Title:</label>
       <input type="text" placeholder="Title" ng-model="user.title">
+
       <label>First Name</label>
       <input type="text" placeholder="First Name" ng-model="user.first_name">
+
       <label>Last Name</label>
       <input type="text" placeholder="Last Name" ng-model="user.last_name">
+
       <label>Grade</label>
-      <input type="select" placeholder="Email Address" ng-model="user.email">
+      <select name="gradeSelect" id="gradeSelect" ng-model="user.grade">
+        <option ng-repeat="grade in GradesController.grades" value="{{grade.id}}">{{grade.grade}}</option>
+      </select>
+
       <label>School</label>
-      <input type="select" placeholder="Email Address" ng-model="user.email">
+      <select name="schoolSelect" id="schoolSelect" ng-model="user.school">
+        <option ng-repeat="school in SchoolsController.schools" value="{{school.id}}">{{school.name}}</option>
+      </select>
+
       <label>Email</label>
       <input type="email" placeholder="Email Address" ng-model="user.email">
+
       <label>Password</label>
       <input type="password" placeholder="Password" ng-model="user.password">
+      
       <input type="submit" value="Sign Up">
   </form>
