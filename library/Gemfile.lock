@@ -49,7 +49,11 @@ GEM
     byebug (8.2.4)
     concurrent-ruby (1.0.1)
     debug_inspector (0.0.2)
+<<<<<<< HEAD
     devise (3.5.6)
+=======
+    devise (3.4.1)
+>>>>>>> ec8b556e05562af06567249a6bcc11717275a4f8
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
@@ -158,7 +162,11 @@ DEPENDENCIES
   bcrypt (~> 3.1.7)
   bower-rails
   byebug
+<<<<<<< HEAD
   devise
+=======
+  devise (~> 3.4.0)
+>>>>>>> ec8b556e05562af06567249a6bcc11717275a4f8
   jbuilder (~> 2.0)
   jquery-rails
   materialize-sass

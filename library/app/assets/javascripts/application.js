@@ -1,6 +1,7 @@
 //= require angular
 //= require angular-ui-router
 //= require angular-resource
+//= require AngularDevise
 //= require angular-rails-templates
 //= require angular-devise
 //= require materialize-sprockets
