@@ -1,5 +1,6 @@
 <h3 class="center">Sign Up</h3>
-  
+  <div class= "row">
+  <div class="col s6">
   <form validate ng-submit="register()">
       <label>Title:</label>
       <input type="text" placeholder="Title" ng-model="user.title">
@@ -9,12 +10,13 @@
 
       <label>Last Name</label>
       <input type="text" placeholder="Last Name" ng-model="user.last_name">
-
-      <label>Grade</label>
-      <select name="gradeSelect" id="gradeSelect" ng-model="user.grade">
+      
+      <div class="input-field">
+      <label for="gradeSelect">Grade</label>
+      <select name="gradeSelect" id="gradeSelect" ng-model="user.grade" ng-controller="GradesController">
         <option ng-repeat="grade in GradesController.grades" value="{{grade.id}}">{{grade.grade}}</option>
       </select>
-
+      </div>
       <label>School</label>
       <select name="schoolSelect" id="schoolSelect" ng-model="user.school">
         <option ng-repeat="school in SchoolsController.schools" value="{{school.id}}">{{school.name}}</option>
@@ -25,6 +27,8 @@
 
       <label>Password</label>
       <input type="password" placeholder="Password" ng-model="user.password">
-      
+
       <input type="submit" value="Sign Up">
   </form>
+  </div>
+</div>
