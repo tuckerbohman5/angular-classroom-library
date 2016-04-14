@@ -11,11 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160414192654) do
-=======
-ActiveRecord::Schema.define(version: 20160414161146) do
->>>>>>> ec8b556e05562af06567249a6bcc11717275a4f8
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -77,13 +73,8 @@ ActiveRecord::Schema.define(version: 20160414161146) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
-<<<<<<< HEAD
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-=======
     t.datetime "created_at"
     t.datetime "updated_at"
->>>>>>> ec8b556e05562af06567249a6bcc11717275a4f8
     t.string   "first_name"
     t.string   "last_name"
     t.integer  "grade_id"

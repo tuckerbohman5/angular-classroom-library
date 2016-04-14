@@ -1,10 +1,8 @@
 source 'https://rubygems.org'
 
-<<<<<<< HEAD
+
 gem 'devise'
-=======
-gem 'devise', '~> 3.4.0'
->>>>>>> ec8b556e05562af06567249a6bcc11717275a4f8
+
 
 gem 'jquery-rails'
 
