@@ -3,7 +3,7 @@
   <li ng-repeat="book in ctrl.books">
     <h3>{{ book.title }}</h3>
     <p>
-      {{ book.author }}
+      {{ book.author.last_name + ', ' + book.author.first_name }}
     </p>
   </li>
 </ul>
