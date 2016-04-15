@@ -3,11 +3,12 @@
     <div class="nav-wrapper">
       <a href="#!" class="brand-logo">Angular-Library</a>
       <ul class="right hide-on-med-and-down">
-        <li  ui-sref-active="active"><a href="#"  ui-sref="home.login" >Log In</a></li>
-        <li><a href="#"  ui-sref="home.books" >My Library</a></li>
-        <li><a href="#"  ui-sref="home.new" >New Book</a></li>
-        <li><a href="#"  ui-sref="#" >Find Book</a></li>
-        <li><a href="#"  ui-sref="#" >View Teachers</a></li>
+        <li ng-hide="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="home.login" >Log In</a></li>
+        <li ng-hide="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="home.register" >Sign Up</a></li>
+        <li ng-show="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="home.books" >My Library</a></li>
+        <li ng-show="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="home.new" >New Book</a></li>
+        <li ng-show="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="#" >Find Book</a></li>
+        <li ng-show="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="#" >View Teachers</a></li>
       </ul>
     </div>
   </nav>
