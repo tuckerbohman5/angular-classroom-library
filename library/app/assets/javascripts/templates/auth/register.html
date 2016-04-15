@@ -12,11 +12,11 @@
       <input type="text" placeholder="Last Name" ng-model="user.last_name">
       
       
-      
-      <select name="gradeSelect" id="gradeSelect" ng-model="user.grade_id" ng-controller="GradesController as ctrl">
+      <label for="gradeSelect">Grade</label>
+      <select style="display:inline" name="gradeSelect" id="gradeSelect" ng-model="user.grade_id" ng-controller="GradesController as ctrl">
         <option ng-repeat="grade in ctrl.grades" value="{{grade.id}}">{{grade.grade}}</option>
       </select>
-      <label for="gradeSelect">Grade</label>
+      
       <label>School</label>
       <select name="schoolSelect" id="schoolSelect" ng-model="user.school">
         <option ng-repeat="school in SchoolsController.schools" value="{{school.id}}">{{school.name}}</option>
