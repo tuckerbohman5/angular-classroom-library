@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160414192654) do
     t.string   "title"
     t.integer  "author_id"
     t.integer  "reading_level_id"
-    t.integer  "teacher_id"
+    t.integer  "user_id"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
@@ -48,18 +48,6 @@ ActiveRecord::Schema.define(version: 20160414192654) do
     t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "teachers", force: :cascade do |t|
-    t.string   "title"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.integer  "grade_id"
-    t.integer  "school_id"
-    t.string   "email"
-    t.string   "password_digest"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
   end
 
   create_table "users", force: :cascade do |t|

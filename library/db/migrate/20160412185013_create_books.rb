@@ -4,7 +4,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :title
       t.integer :author_id
       t.integer :reading_level_id
-      t.integer :teacher_id
+      t.integer :user_id
 
       t.timestamps null: false
     end

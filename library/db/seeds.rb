@@ -37,12 +37,12 @@ level_5 = ReadingLevel.create(level: 'E')
 level_6 = ReadingLevel.create(level: 'F')
 
 #create Teachers
-teacher_1 = Teacher.create(title: 'Mrs', first_name: 'Rachel', last_name: 'Bohman', grade_id: 2, school_id: 1, email: 'rbohman@test.edu', password: 'DisneyLover')
-teacher_2 = Teacher.create(title: 'Mrs', first_name: 'Joanna', last_name: 'Smith', grade_id: 4, school_id: 1, email: 'jsmith@test.edu', password: 'BookLover')
-teacher_3 = Teacher.create(title: 'Mr', first_name: 'John', last_name: 'Johnson', grade_id: 7, school_id: 2, email: 'jjohnson@test.edu', password: 'FunTeacher')
-teacher_4 = Teacher.create(title: 'Ms', first_name: 'Sarah', last_name: 'Hunt', grade_id: 8, school_id: 2, email: 'shunt@test.edu', password: 'ScienceForLife')
-teacher_5 = Teacher.create(title: 'Mrs', first_name: 'Chelsea', last_name: 'Beckstead', grade_id: 10, school_id: 3, email: 'cbeckstead@test.edu', password: 'DanceTeach')
-teacher_6 = Teacher.create(title: 'Mr', first_name: 'Fred', last_name: 'Jo', grade_id: 12, school_id: 3, email: 'fjo@test.edu', password: 'HistoryNow')
+teacher_1 = User.create(title: 'Mrs', first_name: 'Rachel', last_name: 'Bohman', grade_id: 2, school_id: 1, email: 'rbohman@test.edu', password: 'DisneyLover')
+teacher_2 = User.create(title: 'Mrs', first_name: 'Joanna', last_name: 'Smith', grade_id: 4, school_id: 1, email: 'jsmith@test.edu', password: 'BookLover')
+teacher_3 = User.create(title: 'Mr', first_name: 'John', last_name: 'Johnson', grade_id: 7, school_id: 2, email: 'jjohnson@test.edu', password: 'FunTeacher')
+teacher_4 = User.create(title: 'Ms', first_name: 'Sarah', last_name: 'Hunt', grade_id: 8, school_id: 2, email: 'shunt@test.edu', password: 'ScienceForLife')
+teacher_5 = User.create(title: 'Mrs', first_name: 'Chelsea', last_name: 'Beckstead', grade_id: 10, school_id: 3, email: 'cbeckstead@test.edu', password: 'DanceTeach')
+teacher_6 = User.create(title: 'Mr', first_name: 'Fred', last_name: 'Jo', grade_id: 12, school_id: 3, email: 'fjo@test.edu', password: 'HistoryNow')
 
 
 #create authors
