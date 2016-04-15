@@ -9,7 +9,8 @@
         <li ng-show="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="home.new" >New Book</a></li>
         <li ng-show="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="#" >Find Book</a></li>
         <li ng-show="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="#" >View Teachers</a></li>
-        <li ng-show="signedIn()"><a href="" ng-click="logout()">Log Out &nbsp;&nbsp;|</a></li>
+        <li ng-show="signedIn()"> &nbsp;&nbsp;&nbsp;{{ user.first_name }} &nbsp;&nbsp;</li>
+        <li ng-show="signedIn()"><a href="" ng-click="logout()">Log Out &nbsp;&nbsp;</a></li>
       </ul>
     </div>
   </nav>
