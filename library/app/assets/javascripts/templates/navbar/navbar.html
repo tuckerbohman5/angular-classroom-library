@@ -5,9 +5,9 @@
       <ul class="right hide-on-med-and-down">
         <li ng-hide="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="home.login" >Log In</a></li>
         <li ng-hide="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="home.register" >Sign Up</a></li>
-        <li ng-show="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="home.books" >{{ user.first_name }}'s Library</a></li>
+        <li ng-show="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="home.library" >{{ user.first_name }}'s Library</a></li>
         <li ng-show="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="home.new" >New Book</a></li>
-        <li ng-show="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="#" >Find Book</a></li>
+        <li ng-show="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="home.books" >Find Book</a></li>
         <li ng-show="signedIn()" ui-sref-active="active"><a href="#"  ui-sref="#" >View Teachers</a></li>
         <li ng-show="signedIn()"><a href="" ng-click="logout()">Log Out &nbsp;&nbsp;</a></li>
       </ul>
