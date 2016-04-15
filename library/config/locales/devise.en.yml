@@ -23,11 +23,8 @@ en:
         subject: "Reset password instructions"
       unlock_instructions:
         subject: "Unlock instructions"
-<<<<<<< HEAD
       password_change:
         subject: "Password Changed"
-=======
->>>>>>> ec8b556e05562af06567249a6bcc11717275a4f8
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."

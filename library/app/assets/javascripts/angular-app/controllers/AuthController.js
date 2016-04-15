@@ -1,4 +1,6 @@
-app.controller('AuthController', AuthController);
+angular
+.module('app')
+.controller('AuthController', AuthController);
 
 function AuthController($scope, $state, Auth) {
 

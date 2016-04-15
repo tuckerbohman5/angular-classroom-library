@@ -1,4 +1,6 @@
-app.controller('NavbarController', NavbarController);
+angular
+.module('app')
+.controller('NavbarController', NavbarController);
 
 function NavbarController($scope, Auth) {
 
