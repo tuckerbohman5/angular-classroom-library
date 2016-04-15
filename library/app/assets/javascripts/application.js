@@ -7,3 +7,8 @@
 //= require materialize-sprockets
 //= require jquery
 //= require_tree .
+
+
+$(document).ready(function() {
+    $('select').material_select();
+  });

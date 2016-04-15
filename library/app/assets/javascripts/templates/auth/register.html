@@ -11,12 +11,12 @@
       <label>Last Name</label>
       <input type="text" placeholder="Last Name" ng-model="user.last_name">
       
-      <div class="input-field">
-      <label for="gradeSelect">Grade</label>
-      <select name="gradeSelect" id="gradeSelect" ng-model="user.grade" ng-controller="GradesController">
-        <option ng-repeat="grade in GradesController.grades" value="{{grade.id}}">{{grade.grade}}</option>
+      
+      
+      <select name="gradeSelect" id="gradeSelect" ng-model="user.grade_id" ng-controller="GradesController as ctrl">
+        <option ng-repeat="grade in ctrl.grades" value="{{grade.id}}">{{grade.grade}}</option>
       </select>
-      </div>
+      <label for="gradeSelect">Grade</label>
       <label>School</label>
       <select name="schoolSelect" id="schoolSelect" ng-model="user.school">
         <option ng-repeat="school in SchoolsController.schools" value="{{school.id}}">{{school.name}}</option>
