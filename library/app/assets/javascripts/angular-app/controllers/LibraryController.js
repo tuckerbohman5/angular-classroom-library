@@ -1,8 +1,9 @@
 angular
   .module('app')
   .controller('LibraryController', LibraryController);
-function LibraryController(User) {
+
+function LibraryController(Auth) {
   var ctrl = this;
   ctrl.user = Auth.currentUser();
-  ctrl.books = user.books
+  ctrl.books = ctrl.user.books
 };

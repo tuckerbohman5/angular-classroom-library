@@ -32,6 +32,11 @@ angular
        templateUrl: 'home/new.html',
        controller: 'BooksController as ctrl'
      })
+     .state('home.library', {
+       url: 'library',
+       templateUrl: 'library/library.html',
+       controller: 'LibraryController as ctrl'
+     })
      .state('home.books', {
        url: 'books',
        templateUrl: 'home/books.html',
