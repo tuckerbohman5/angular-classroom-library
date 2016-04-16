@@ -2,8 +2,15 @@ angular
   .module('app')
   .controller('LibraryController', LibraryController);
 
-function LibraryController(Book, $filter) {
+function LibraryController(Auth, Book, $filter) {
+
   var ctrl = this;
+
+  Auth.currentUser()
+    .then(function(user) {
+      ctrl.user = user;
+    });
+    
   ctrl.books = Book.query({user_id: 7});
 
 
