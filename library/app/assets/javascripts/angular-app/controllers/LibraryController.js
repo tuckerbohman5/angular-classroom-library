@@ -4,6 +4,7 @@ angular
 
 function LibraryController(Auth, User) {
   var ctrl = this;
-  
-  ctrl.books = ctrl.user.books
+  ctrl.user = Auth.currentUser();
+  debugger;
+  // ctrl.books = Book.query(id: ctrl.user);
 };
