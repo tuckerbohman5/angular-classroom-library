@@ -1,8 +1,9 @@
 <h1>My Books</h1>
   {{ctrl.user.first_name}}
+  {{ctrl.user.id}}
 <ul>
 
-  <li ng-repeat="book in ctrl.books | filter:{user_id:7}">
+  <li ng-repeat="book in ctrl.books | filter:{user_id:ctrl.user.id}">
     <h3>{{ book.title }}</h3>
     <p>
       Author: {{ book.author.last_name + ', ' + book.author.first_name }}
