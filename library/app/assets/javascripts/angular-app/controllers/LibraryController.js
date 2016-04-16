@@ -10,7 +10,7 @@ function LibraryController(Auth, Book, $filter) {
     .then(function(user) {
       ctrl.user = user;
     });
-      ctrl.books = Book.query({user_id: 7});
+      ctrl.books = Book.query();
 
 
   // ctrl.library = $filter('filter')(ctrl.books, user_id:2);

@@ -2,11 +2,13 @@
   {{ctrl.user.first_name}}
 <ul>
 
-  <li ng-repeat="book in ctrl.books">
+  <li ng-repeat="book in ctrl.books | filter:{user_id:7}">
     <h3>{{ book.title }}</h3>
     <p>
       Author: {{ book.author.last_name + ', ' + book.author.first_name }}
       Reading Level: {{ book.reading_level.level }}
+      User Id: {{ book.user_id}}
+      
      
     </p>
   </li>
