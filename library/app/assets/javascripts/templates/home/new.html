@@ -2,13 +2,15 @@
 <form validate ng-submit="ctrl.addBook()">
  <label for="title">Title</label>
  <input name="title" ng-model="ctrl.book.title">
- <!-- <label for="author">Author</label>
- <input name="author"> -->
+ 
   <label for="authorSelect">Select Author</label>
-    <select style="display:inline" name="authorSelect" id="authorSelect" ng-model="ctrl.book.author_id" >
-      
+    <select style="display:inline" name="authorSelect" id="authorSelect" ng-model="ctrl.book.author_id" >  
         <option  ng-repeat="author in ctrl.authors" value="{{author.id}}">{{author.last_name + ', ' + author.first_name}}</option>
+    </select>
 
+  <label for="levelSelect">Reading Level</label>
+    <select style="display:inline" name="levelSelect" id="levelSelect" ng-model="ctrl.book.reading_level_id" >  
+        <option  ng-repeat="readingLevel in ctrl.readingLevels" value="{{readingLevel.id}}">{{readingLevel.level}}</option>
     </select>
 
 
