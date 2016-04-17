@@ -5,8 +5,10 @@
  <!-- <label for="author">Author</label>
  <input name="author"> -->
   <label for="authorSelect">Select Author</label>
-    <select style="display:inline" name="authorSelect" id="authorSelect" ng-model="ctr.book.author_id" ng-controller="AuthorsController as ctrl">
-        <option ng-repeat="author in ctrl.authors" value="{{author.id}}">{{author.last_name + ', ' + author.first_name}}</option>
+    <select style="display:inline" name="authorSelect" id="authorSelect" ng-model="ctrl.book.author_id" >
+      
+        <option  ng-repeat="author in ctrl.authors" value="{{author.id}}">{{author.last_name + ', ' + author.first_name}}</option>
+
     </select>
 
 
