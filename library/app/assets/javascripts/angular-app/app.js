@@ -30,7 +30,7 @@ angular
      .state('home.new', {
        url: 'new',
        templateUrl: 'home/new.html',
-       controller: 'BooksController as ctrl'
+       controller: 'NewBookController as ctrl'
      })
      .state('home.library', {
        url: 'library',
