@@ -46,6 +46,11 @@ angular
        url: 'new_author',
        templateUrl: 'author/new.html',
        controller: 'NewAuthorController as ctrl'
+     })
+     .state('home.teachers', {
+       url: 'teachers',
+       templateUrl: 'teachers/index.html',
+       controller: 'UsersController as ctrl'
      });
   $urlRouterProvider.otherwise('/');
 });
