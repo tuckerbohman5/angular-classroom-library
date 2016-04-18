@@ -11,7 +11,7 @@
     <p>
       Author: {{ book.author.last_name + ', ' + book.author.first_name }}
       Reading Level: {{ book.reading_level.level }}
-      Teacher: {{ book.user.title + '. ' + book.user.last_name }}
+      <a href="#" ui-sref="home.showTeacher({id: book.user.id})">Teacher: {{ book.user.title + '. ' + book.user.last_name }}</a>
     </p>
   </li>
 </ul>
