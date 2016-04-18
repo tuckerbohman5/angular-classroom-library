@@ -41,6 +41,11 @@ angular
        url: 'books',
        templateUrl: 'home/books.html',
        controller: 'BooksController as ctrl'
+     })
+     .state('home.newAuthor', {
+       url: 'new_author',
+       templateUrl: 'author/new.html',
+       controller: 'NewAuthorController as ctrl'
      });
   $urlRouterProvider.otherwise('/');
 });

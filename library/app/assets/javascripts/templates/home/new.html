@@ -3,7 +3,7 @@
  <label for="title">Title</label>
  <input name="title" ng-model="ctrl.book.title">
  
-  <label for="authorSelect">Select Author</label>
+  <label for="authorSelect">Select Author or <a href="#" ui-sref="home.newAuthor">Create New Author</a> </label>
     <select style="display:inline" name="authorSelect" id="authorSelect" ng-model="ctrl.book.author_id" >  
         <option  ng-repeat="author in ctrl.authors" value="{{author.id}}">{{author.last_name + ', ' + author.first_name}}</option>
     </select>
