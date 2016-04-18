@@ -51,6 +51,11 @@ angular
        url: 'teachers',
        templateUrl: 'teachers/index.html',
        controller: 'UsersController as ctrl'
-     });
+     })
+     .state('home.teacher', {
+        url: 'teacher/:id',
+        templateUrl: 'teachers/show.html',
+        controller: 'ShowTeacherController as ctrl'
+      });
   $urlRouterProvider.otherwise('/');
 });
