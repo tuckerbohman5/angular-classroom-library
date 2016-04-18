@@ -31,7 +31,7 @@ module Api
       end 
       private 
         def book_params 
-          params.require(:book).permit(:title, :author_id, :reading_level_id, :teacher_id) 
+          params.require(:book).permit(:title, :author_id, :reading_level_id, :user_id) 
         end 
     end 
   end
