@@ -13,8 +13,11 @@
   </tr>
 
   <tr ng-repeat="user in ctrl.users | filter:search">
-    <td>{{user.title}}</td>
-    <td>{{user.first_name}}</td>
-    <td>{{user.last_name}}</td>
+    
+      <td>{{user.title}}</td>
+      <td>{{user.first_name}}</td>
+      <td>{{user.last_name}}</td>
+      <td><a href="#" ui-sref="home.showTeacher({id: user.id})">View Teacher</a></td>
+    
   </tr>
 </table>
