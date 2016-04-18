@@ -1,6 +1,12 @@
 <h1>Books</h1>
+   <div>
+    Find a book by entering a search criteria: <br>
+    <label>Author Last Name <input ng-model="search.author.last_name"></label><br>
+    <label>Title<input ng-model="search.title"></label><br>
+    <label>Reading Level<input ng-model="search.reading_level.level"></label><br>
+  </div>
 <ul>
-  <li ng-repeat="book in ctrl.books">
+  <li ng-repeat="book in ctrl.books | filter:search" >
     <h3>{{ book.title }}</h3>
     <p>
       Author: {{ book.author.last_name + ', ' + book.author.first_name }}
