@@ -11,7 +11,7 @@
     <p>
       Author: {{ book.author.last_name + ', ' + book.author.first_name }}
       Reading Level: {{ book.reading_level.level }}
-      Owner: {{ book.teacher.title + '. ' + book.teacher.last_name }}
+      Teacher: {{ book.user.title + '. ' + book.user.last_name }}
     </p>
   </li>
 </ul>
