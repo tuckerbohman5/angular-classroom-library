@@ -2,7 +2,8 @@
 <div ui-view></ui-view>
 <div class="container">
         <h1>Welcome to Angular's Classroom Library!</h1>
-        <p>Please <a href="#">Signin</a> to enjoy all of the great features of Angular's Classroom Library.</p>
+
+        <p ng-show="signedIn()">Please <a href="#">Signin</a> to enjoy all of the great features of Angular's Classroom Library.</p>
 </div>
 
 <!-- <div class="navbar">
