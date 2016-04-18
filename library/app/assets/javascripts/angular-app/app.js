@@ -52,8 +52,8 @@ angular
        templateUrl: 'teachers/index.html',
        controller: 'UsersController as ctrl'
      })
-     .state('home.teacher', {
-        url: 'teacher/:id',
+     .state('home.showTeacher', {
+        url: 'teachers/:id',
         templateUrl: 'teachers/show.html',
         controller: 'ShowTeacherController as ctrl'
       });
