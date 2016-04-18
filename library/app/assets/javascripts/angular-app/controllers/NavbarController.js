@@ -2,7 +2,7 @@ angular
 .module('app')
 .controller('NavbarController', NavbarController);
 
-function NavbarController($scope, Auth) {
+function NavbarController($scope, Auth, $state) {
 
   $scope.signedIn = Auth.isAuthenticated;
 
@@ -23,6 +23,7 @@ function NavbarController($scope, Auth) {
 
   $scope.$on('devise:logout', function(e, user) {
     $scope.user = {};
+    
   });
 
 };

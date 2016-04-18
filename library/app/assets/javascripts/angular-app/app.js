@@ -13,7 +13,7 @@ angular
       controller: 'AuthController',
       onEnter: ['$state', 'Auth', function($state, Auth) {
         Auth.currentUser().then(function() {
-          $state.go('home')
+          $state.go('home.library')
         });
       }]
     })
@@ -23,7 +23,7 @@ angular
       controller: 'AuthController',
       onEnter: ['$state', 'Auth', function($state, Auth) {
         Auth.currentUser().then(function() {
-          $state.go('home')
+          $state.go('home.library')
         });
       }]
     })
