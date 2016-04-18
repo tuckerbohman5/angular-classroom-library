@@ -6,6 +6,12 @@
     <th>Last Name</th>
   </tr>
 
+  <tr>
+    <td><input type="text" ng-model="search.title" placeholder="Search Title"></td>
+    <td><input type="text" ng-model="search.first_name" placeholder="Search First Name"></td>
+    <td><input type="text" ng-model="search.last_name" placeholder="Search Last Name"></td>
+  </tr>
+
   <tr ng-repeat="user in ctrl.users">
     <td>{{user.title}}</td>
     <td>{{user.first_name}}</td>
