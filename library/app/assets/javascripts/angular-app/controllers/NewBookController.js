@@ -10,7 +10,7 @@ function NewBookController(Book, $location, Author, ReadingLevel) {
   ctrl.book = new Book();
   ctrl.addBook = function() {
     ctrl.book.$save(function() {
-      $location.path('books');
+      $location.path('library');
     });
   };
 }
