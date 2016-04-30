@@ -15,7 +15,7 @@ function BooksController(Book, Auth, Request, $state) {
     ctrl.request.book_id = book.id;
     
     ctrl.request.$save(function(){
-      $state.go('home.library');
+      $state.go('home');
     })
   } 
 

@@ -1,18 +1,18 @@
 <div ng-include="'navbar/navbar.html'"></div>
 <div ui-view></ui-view>
 <div class="container">
-        <h1>Welcome to Angular's Classroom Library!</h1>
+  <h1>Welcome to Angular's Classroom Library!</h1>
+  <h3>Requests waiting for your approval:</h3>
+  <div ng-repeat="request in ctrl.requests | findRequestsIn:ctrl.user.id">
+    <p>{{request}}</p>
+  </div>
+  <h3>You requested the following books waiting for owner's approval:</h3>
+  <div ng-repeat="request in ctrl.requests | findRequestsOut:ctrl.user.id">
+    <p>{{request}}</p>
+  </div>
 
-        <p ng-show="signedIn()">Please <a href="#">Signin</a> to enjoy all of the great features of Angular's Classroom Library.</p>
+  <p ng-show="signedIn()">Please <a href="#">Signin</a> to enjoy all of the great features of Angular's Classroom Library.</p>
+
+
 </div>
 
-<!-- <div class="navbar">
-  <h1>Angular Classroom Library</h1>
-  <hr>
-  <br>
-  <a href="#" ui-sref="home.new" ui-sref-active="active">New Book</a>
-  <a href="#" ui-sref="home.books" ui-sref-active="active">My Books</a>
-</div>
-<br>
-<hr>
-<div ui-view></div> -->
