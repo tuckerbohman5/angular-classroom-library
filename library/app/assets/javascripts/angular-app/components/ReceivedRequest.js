@@ -6,7 +6,7 @@ var ReceivedRequest = {
   controller: function(){
     
     var ctrl = this;
-
+  },
     
   controllerAs: 'request'
 };

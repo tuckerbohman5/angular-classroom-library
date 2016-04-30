@@ -4,11 +4,11 @@
   <h1>Welcome to Angular's Classroom Library!</h1>
   <h3>Requests waiting for your approval:</h3>
   <div ng-repeat="request in ctrl.requestsIn">
-    <p>{{request}}</p>
+    <received-request request="request"></received-request>
   </div>
   <h3>You requested the following books waiting for owner's approval:</h3>
   <div ng-repeat="request in ctrl.requestsOut">
-    <p>{{request}}</p>
+    <sent-request request="request"></sent-request>
   </div>
 
   <p ng-show="signedIn()">Please <a href="#">Signin</a> to enjoy all of the great features of Angular's Classroom Library.</p>

@@ -6,7 +6,7 @@ var SentRequest = {
   controller: function(){
     
     var ctrl = this;
-
+  },
     
   controllerAs: 'request'
 };
