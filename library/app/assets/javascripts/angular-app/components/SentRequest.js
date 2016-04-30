@@ -8,7 +8,7 @@ var SentRequest = {
     var ctrl = this;
   },
     
-  controllerAs: 'request'
+  controllerAs: 'ctrl'
 };
 
 angular
