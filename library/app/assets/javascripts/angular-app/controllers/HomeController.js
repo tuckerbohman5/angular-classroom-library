@@ -1,12 +1,18 @@
 angular
   .module('app')
   .controller('HomeController', HomeController);
-function HomeController(Request, Auth) {
+
+function HomeController(Request, Auth, $filter) {
   var ctrl = this;
    Auth.currentUser()
     .then(function(user) {
-      ctrl.user = user;
+      ctrl.user = user.id;
     });
-  ctrl.requests = Request.query();
+  Request.query(function(requests){
+    ctrl.requestsIn = $filter('findRequestsIn')(requests, ctrl.user);
+    ctrl.requestsOut = $filter('findRequestsOut')(requests, ctrl.user);
+  });
+  
+  
   
 }

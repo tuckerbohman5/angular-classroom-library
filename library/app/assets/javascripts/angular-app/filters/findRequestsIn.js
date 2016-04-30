@@ -4,11 +4,14 @@ angular
 
 function findRequestsIn(){
   return function(requests, user) {
+    
+    var requestsIn = [];
     for(var i = 0; i < requests.length; i++){
       if (requests[i].owner_id === user) {
-        return requests[i];
+        requestsIn.push(requests[i]);
       }
     }
+    return requestsIn;
   }
 }
   

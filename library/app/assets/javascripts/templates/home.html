@@ -3,11 +3,11 @@
 <div class="container">
   <h1>Welcome to Angular's Classroom Library!</h1>
   <h3>Requests waiting for your approval:</h3>
-  <div ng-repeat="request in ctrl.requests | findRequestsIn:ctrl.user.id">
+  <div ng-repeat="request in ctrl.requestsIn">
     <p>{{request}}</p>
   </div>
   <h3>You requested the following books waiting for owner's approval:</h3>
-  <div ng-repeat="request in ctrl.requests | findRequestsOut:ctrl.user.id">
+  <div ng-repeat="request in ctrl.requestsOut">
     <p>{{request}}</p>
   </div>
 
