@@ -1,5 +1,5 @@
-var ReceivedRequest = {
-  templateUrl: 'requests/received_request.html',
+var SentRequest = {
+  templateUrl: 'requests/sent_request.html',
   bindings: {
     request: '='
   },
@@ -13,4 +13,4 @@ var ReceivedRequest = {
 
 angular
   .module('app')
-  .component('receivedRequest', ReceivedRequest);
+  .component('sentRequest', SentRequest);
