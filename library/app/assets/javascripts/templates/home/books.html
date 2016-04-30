@@ -21,7 +21,7 @@
     <td>{{ book.reading_level.level }}</td>
     <td>
       <a href="#" ui-sref="home.showTeacher({id: book.user.id})">Teacher: {{ book.user.title + '. ' + book.user.last_name }}</a>
-      <button href="#" ng-click="borrowBook(book)">Borrow Book</button>
+      <button ng-click="ctrl.borrowBook(book)">Borrow Book</button>
     </td>
   </tr>
 </table>

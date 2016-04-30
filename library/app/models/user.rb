@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   belongs_to :school
   belongs_to :grade
 
+  has_many :requests, :foreign_key => :requester_id
+
   def as_json(options = {})
     super(options.merge(include: [:school, :grade, :books]))
   end
