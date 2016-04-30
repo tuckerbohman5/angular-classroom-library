@@ -1,3 +1,4 @@
+
 module Api
   module V1 
     class RequestsController < ApplicationController 
@@ -9,9 +10,16 @@ module Api
       def show 
         
       end 
+
       def create 
-       
+        @request = current_user.requests.build(request_params)
+        if @request.save
+          render json: @request
+        else
+          render :nothing
+        end
       end 
+      
       def update 
        
       end 
@@ -20,8 +28,8 @@ module Api
          
       end 
       private 
-        def reading_level_params 
-          # params.require(:request).permit(:approval) 
+        def request_params 
+          params.require(:request).permit(:owner_id, :book_id) 
         end 
     end 
   end

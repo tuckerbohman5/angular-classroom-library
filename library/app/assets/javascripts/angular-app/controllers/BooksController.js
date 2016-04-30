@@ -1,7 +1,7 @@
 angular
   .module('app')
   .controller('BooksController', BooksController);
-function BooksController(Book, Auth) {
+function BooksController(Book, Auth, Request, $state) {
   var ctrl = this;
 
   Auth.currentUser()
@@ -10,7 +10,13 @@ function BooksController(Book, Auth) {
     });
 
   ctrl.borrowBook = function(book) {
-    debugger;
+    ctrl.request = new Request();
+    ctrl.request.owner_id = book.user.id; 
+    ctrl.request.book_id = book.id;
+    
+    ctrl.request.$save(function(){
+      $state.go('home.library');
+    })
   } 
 
   ctrl.books = Book.query();
