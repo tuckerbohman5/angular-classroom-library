@@ -5,12 +5,19 @@ var ReceivedRequest = {
   },
   controller: function(Request){
     var ctrl = this;
-    
+
     ctrl.approveRequest = function(){
       ctrl.request.approved = true;
       
       Request.update(ctrl.request, function(resp){
-       debugger;
+       
+      })    
+    }
+    ctrl.checkoutBook = function(){
+      ctrl.request.checked_out = true;
+      
+      Request.update(ctrl.request, function(resp){
+       
       })    
     }
   },
