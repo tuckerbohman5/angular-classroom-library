@@ -4,7 +4,7 @@ angular
 function Request($resource) {
   
   var Request = $resource('http://localhost:3000/api/v1/requests/:id.json', {id: '@id'}, {
-  update: { method: 'PUT' }
+  update: { method: 'PATCH' }
 });
   return Request; 
 }

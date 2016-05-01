@@ -21,7 +21,9 @@ module Api
       end 
       
       def update 
-       
+       @request = Request.find_by(id: params[:id])
+       @request.update(request_params)
+       render json: @request
       end 
  
       def destroy 
@@ -29,7 +31,7 @@ module Api
       end 
       private 
         def request_params 
-          params.require(:request).permit(:owner_id, :book_id) 
+          params.require(:request).permit(:owner_id, :book_id, :approved) 
         end 
     end 
   end
