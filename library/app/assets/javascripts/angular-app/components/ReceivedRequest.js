@@ -4,8 +4,10 @@ var ReceivedRequest = {
     request: '='
   },
   controller: function(){
-    
     var ctrl = this;
+    ctrl.approveRequest = function(){
+      debugger;
+    }
   },
     
   controllerAs: 'ctrl'
