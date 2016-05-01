@@ -8,7 +8,7 @@ module Api
         respond_with(Request.all.order("id DESC"))
       end 
       def show 
-        
+        respond_with(Request.find_by(id: params[:id]))
       end 
 
       def create 

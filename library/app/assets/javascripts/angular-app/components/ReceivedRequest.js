@@ -3,10 +3,17 @@ var ReceivedRequest = {
   bindings: {
     request: '='
   },
-  controller: function(){
+  controller: function(Request){
     var ctrl = this;
+
     ctrl.approveRequest = function(){
-      debugger;
+      Request.get({id: this.id}, function(response){
+        debugger;
+        ctrl.request = response
+      });
+      ctrl.request.approved = true;
+
+      ctrl.request.$save
     }
   },
     
