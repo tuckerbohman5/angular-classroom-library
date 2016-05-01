@@ -8,7 +8,7 @@ var ReceivedRequest = {
     var ctrl = this;
   },
     
-  controllerAs: 'request'
+  controllerAs: 'ctrl'
 };
 
 angular

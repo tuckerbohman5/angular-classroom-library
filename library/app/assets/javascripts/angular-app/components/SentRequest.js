@@ -4,8 +4,8 @@ var SentRequest = {
     request: '='
   },
   controller: function(){
-    
     var ctrl = this;
+    
   },
     
   controllerAs: 'ctrl'
