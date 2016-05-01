@@ -1,4 +1,5 @@
 <div style="color:blue">
   <p>{{ctrl.request.requester.title}}. {{ctrl.request.requester.last_name}} requested to borrow {{ctrl.request.book.title}} from you.</p>
-  <p><button ng-click="ctrl.approveRequest()">Approve Request</button><p>
+
+  <p ng-if="ctrl.request.approved === false"><button ng-click="ctrl.approveRequest()">Approve Request</button><p>
 </div>

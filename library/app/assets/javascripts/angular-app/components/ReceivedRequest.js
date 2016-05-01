@@ -5,14 +5,13 @@ var ReceivedRequest = {
   },
   controller: function(Request){
     var ctrl = this;
-
+    
     ctrl.approveRequest = function(){
       ctrl.request.approved = true;
       
       Request.update(ctrl.request, function(resp){
        debugger;
-      })
-        
+      })    
     }
   },
     
