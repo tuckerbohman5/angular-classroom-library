@@ -31,7 +31,7 @@ module Api
       end 
       private 
         def request_params 
-          params.require(:request).permit(:owner_id, :book_id, :approved, :checked_out) 
+          params.require(:request).permit(:owner_id, :book_id, :approved, :checked_out, :requester_id, :returned) 
         end 
     end 
   end
