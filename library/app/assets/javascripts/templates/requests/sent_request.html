@@ -1,4 +1,7 @@
 <div style="color:red">
-  <p>You requested {{ctrl.request.book.title}} from {{ctrl.request.owner.title}}. {{ctrl.request.owner.last_name}}</p>
-  <p>Status: "Pending Approval"<p>
+  <div ng-if="request.approved === false">
+    <p>You requested {{ctrl.request.book.title}} from {{ctrl.request.owner.title}}. {{ctrl.request.owner.last_name}}</p>
+    <p>Status: "Pending Approval"<p>
+  </div>
+  <div></div>
 </div>
