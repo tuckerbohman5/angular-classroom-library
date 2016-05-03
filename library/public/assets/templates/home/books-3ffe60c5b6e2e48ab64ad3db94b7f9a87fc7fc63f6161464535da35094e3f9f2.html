@@ -1,0 +1,45 @@
+<h1>Find A Book</h1>
+
+
+<table>
+
+  <tr>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Reading Level</th>
+    <th>Teacher/Owner</th>
+  </tr>
+  <tr>
+    <td><input ng-model="search.title" placeholder="Search by Title"></td>
+    <td><input ng-model="search.author.last_name" placeholder="Search by Author's Last Name"></td>
+    <td><input ng-model="search.reading_level.level" placeholder="Search by Reading Level"></td>
+  </tr>
+
+  <tr ng-repeat="book in ctrl.books | filter:search">
+    <td>{{book.title}}</td>
+    <td>{{ book.author.last_name + ', ' + book.author.first_name }}</td>
+    <td>{{ book.reading_level.level }}</td>
+    <td>
+      <a href="#" ui-sref="home.showTeacher({id: book.user.id})">Teacher: {{ book.user.title + '. ' + book.user.last_name }}</a>
+      <button ng-click="ctrl.borrowBook(book)">Borrow Book</button>
+    </td>
+  </tr>
+</table>
+
+
+   <!-- <div>
+    Find a book by entering a search criteria: <br>
+    <label>Author Last Name <input ng-model="search.author.last_name"></label><br>
+    <label>Title<input ng-model="search.title"></label><br>
+    <label>Reading Level<input ng-model="search.reading_level.level"></label><br>
+  </div>
+<ul>
+  <li ng-repeat="book in ctrl.books | filter:search" >
+    <h3>{{ book.title }}</h3>
+    <p>
+      Author: {{ book.author.last_name + ', ' + book.author.first_name }}
+      Reading Level: {{ book.reading_level.level }}
+      <a href="#" ui-sref="home.showTeacher({id: book.user.id})">Teacher: {{ book.user.title + '. ' + book.user.last_name }}</a>
+    </p>
+  </li>
+</ul> -->

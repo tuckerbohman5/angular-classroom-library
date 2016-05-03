@@ -1,0 +1,28 @@
+<h1>{{ctrl.user.title}}
+{{ctrl.user.first_name}}
+{{ctrl.user.last_name}}</h1>
+<p>School: {{ctrl.user.school.name}}</p>
+<p>Grade: {{ctrl.user.grade.grade}}</p>
+<p>Email: {{ctrl.user.email}}</p>
+
+<h3>{{ctrl.user.title}}
+
+{{ctrl.user.last_name}}'s Books</h3>
+
+
+<ul>
+
+  <li ng-repeat="book in ctrl.books | filter:{user_id:ctrl.user.id}">
+    <h3>{{ book.title }}</h3>
+    <p>
+      Author: {{ book.author.last_name + ', ' + book.author.first_name }}
+      Reading Level: {{ book.reading_level.level }}
+     
+      
+     
+    </p>
+  </li>
+</ul>
+
+
+

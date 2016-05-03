@@ -1,0 +1,38 @@
+<h3 class="center">Sign Up</h3>
+  <div class= "row">
+  <div class="col s6">
+  <form validate ng-submit="register()">
+      <label>Title:</label>
+      <input type="text" placeholder="Title" ng-model="user.title">
+
+      <label>First Name</label>
+      <input type="text" placeholder="First Name" ng-model="user.first_name">
+
+      <label>Last Name</label>
+      <input type="text" placeholder="Last Name" ng-model="user.last_name">
+      
+      
+      <label for="gradeSelect">Grade</label>
+      <select style="display:inline" name="gradeSelect" id="gradeSelect" ng-model="user.grade_id" ng-controller="GradesController as ctrl">
+        <option ng-repeat="grade in ctrl.grades" value="{{grade.id}}">{{grade.grade}}</option>
+      </select>
+      
+      <label for="schoolSelect">School</label>
+      <select style="display:inline" name="schoolSelect" id="schoolSelect" ng-model="user.school_id" ng-controller="SchoolsController as ctrl">
+        <option ng-repeat="school in ctrl.schools" value="{{school.id}}">{{school.name}}</option>
+      </select>
+
+      <label>Email</label>
+      <input type="email" placeholder="Email Address" ng-model="user.email">
+
+      <label>Password</label>
+      <input type="password" placeholder="Password" ng-model="user.password">
+
+      <input type="submit" value="Sign Up">
+  </form>
+  </div>
+</div>
+
+<div ng-controller="GradesController">
+  <li ng-repeat="grade in GradesController.grades"> {{ grade.grade }}</li>
+</div>

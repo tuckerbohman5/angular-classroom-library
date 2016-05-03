@@ -1,0 +1,10 @@
+<div style="color:blue">
+  <p ng-if="ctrl.request.approved === false">{{ctrl.request.requester.title}}. {{ctrl.request.requester.last_name}} requested to borrow {{ctrl.request.book.title}} from you.</p>
+  <p ng-if="ctrl.request.approved === false"><button ng-click="ctrl.approveRequest()">Approve Request</button><p>
+
+  <p ng-if="ctrl.request.approved === true && ctrl.request.checked_out !== true">You approved {{ctrl.request.requester.title}}. {{ctrl.request.requester.last_name}}'s request to borrow {{ctrl.request.book.title}}</p>  
+  <p ng-if="ctrl.request.approved === true && ctrl.request.checked_out !== true"><button ng-click="ctrl.checkoutBook()">Checkout Book</button><p>
+  <div ng-if="ctrl.request.checked_out === true">
+    <p>{{ctrl.request.requester.title}}. {{ctrl.request.requester.last_name}} has checked out {{ctrl.request.book.title}}</p>
+    <p><button ng-click="ctrl.returnBook()">Return Book</button></p>
+</div>
