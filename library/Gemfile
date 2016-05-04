@@ -25,7 +25,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'responders'
 
 gem 'bower-rails'
-
+gem 'rails_stdout_logging'
+gem 'rails_serve_static_assets'
 gem 'angular-rails-templates'
 # Use Unicorn as the app server
 # gem 'unicorn'
